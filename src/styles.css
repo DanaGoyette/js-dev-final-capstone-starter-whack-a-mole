@@ -28,12 +28,19 @@ h2 {
 #start {
     text-align: center;
     font-size: 30px;
+    user-select: none;
 }
 
 #timer{
     color: white;
 }
 
+.start {
+  display: flex;
+  margin-top: 1em;
+  justify-content: center;
+  z-index: 3;
+}
 .grid {
   width: 600px;
   height: 400px;
