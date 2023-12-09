@@ -3,6 +3,7 @@ const moles = document.querySelectorAll('.mole');
 const startButton = document.querySelector('#start');
 const score = document.querySelector('#score');
 const timerDisplay = document.querySelector('#timer');
+const startDiv = document.querySelector('.start')
 
 let time = 0;
 let timer;
@@ -245,6 +246,7 @@ function setDuration(duration) {
 function stopGame(){
   // stopAudio(song);  //optional
   clearInterval(timer);
+  setTimeout(() => startDiv.classList.remove('gone'), 1000);
   return "game stopped";
 }
 
@@ -258,6 +260,7 @@ function startGame(){
   setDuration(10);
   clearScore()
   startTimer()
+  startDiv.classList.add('gone');
   showUp();
   return "game started";
 }

@@ -41,6 +41,9 @@ h2 {
   justify-content: center;
   z-index: 3;
 }
+.gone {
+  display: none;
+}
 .grid {
   width: 600px;
   height: 400px;
