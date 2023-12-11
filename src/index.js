@@ -4,7 +4,7 @@ const startButton = document.querySelector('#start');
 const score = document.querySelector('#score');
 const timerDisplay = document.querySelector('#timer');
 const startDiv = document.querySelector('.start')
-const whackSound = new Audio('../assets/bonk.wav')
+const whackSound = new Audio('./assets/bonk.wav')
 
 let time = 0;
 let timer;
