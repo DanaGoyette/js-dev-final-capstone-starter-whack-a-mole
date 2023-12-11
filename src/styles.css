@@ -83,11 +83,11 @@ h2 {
   height: 100%;
   /*transition: transform 0.5s;*/
   transition: all 1s;
-  pointer-events:auto;
-  cursor: url('../assets/mallet-small.png') 32 16, crosshair;
+  pointer-events: auto;
 }
 
 .hole.show .mole {
   top: 0;
+  cursor: url('../assets/mallet-small.png') 32 16, crosshair;
   /*transform: scale(1.1);*/
 }

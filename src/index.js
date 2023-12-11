@@ -144,6 +144,7 @@ function showAndHide(hole, delay){
 * @param {HTMLDivElement} hole
 */
 function toggleVisibility(hole){
+  hole.firstElementChild.classList.remove('gone');
   hole.classList.toggle('show');
   return hole;
 }
@@ -210,7 +211,12 @@ function startTimer() {
 * @param event {MouseEvent}
 */
 function whack(event) {
-  updateScore()
+  const mole = event.target
+  const hole = mole.parentElement;
+  if (hole.classList.contains('show')) {
+    updateScore()
+    mole.classList.add('gone');
+  }
   return points;
 }
 
