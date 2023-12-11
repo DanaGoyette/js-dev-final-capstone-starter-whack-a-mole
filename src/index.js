@@ -4,6 +4,7 @@ const startButton = document.querySelector('#start');
 const score = document.querySelector('#score');
 const timerDisplay = document.querySelector('#timer');
 const startDiv = document.querySelector('.start')
+const whackSound = new Audio('../assets/bonk.wav')
 
 let time = 0;
 let timer;
@@ -216,6 +217,7 @@ function whack(event) {
   if (hole.classList.contains('show')) {
     updateScore()
     mole.classList.add('gone');
+    whackSound.cloneNode().play()
   }
   return points;
 }
@@ -226,7 +228,6 @@ function whack(event) {
 * for an example on how to set event listeners using a for loop.
 */
 function setEventListeners(){
-  // TODO: Write your code here
   moles.forEach(mole => mole.addEventListener('click', whack))
   return moles;
 }
